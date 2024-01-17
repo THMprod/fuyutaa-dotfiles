@@ -65,8 +65,8 @@ mkdir .config
 cd .config
 mkdir bspwm
 mkdir sxhkd
-cp /usr/share/doc/bspwm/example/bspwmrc bspwm/
-cp /usr/share/doc/bspwm/example/sxhkdrc sxhkd/
+cp /usr/share/doc/bspwm/examples/bspwmrc bspwm/
+cp /usr/share/doc/bspwm/examples/sxhkdrc sxhkd/
 ```
 * Modifying bspwmrc
 ```shell
@@ -103,17 +103,16 @@ sudo pacman -S xorg bspwm sxhkd lightdm lightdm-gtk-greeter feh dunst bat exa ro
 ```shell
 sudo pacman -S --needed base-devel
 sudo git clone https://aur.archlinux.org/yay.git
-sudo chown -R  USERNAME:USERNAME yay
+sudo chown -R  $NAME:$GID yay
 cd yay
 makepkg -si
 ```
 
-* Install [Arian8j2 picom fork](https://github.com/Arian8j2/picom) with yay
+* Install [Arian8j2 picom fork] with yay
 You must run the following command:
 ```shell
-yay picom
+yay -S picom-arian8j2-git
 ```
-And select the one that has "Arian8j2" in the name.
 
 * Make the .config folder and subfolders
 ```shell
